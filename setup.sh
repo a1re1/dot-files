@@ -3,10 +3,7 @@
 # if oh-my-bash
 if [ ! -d "/home/codespace/.oh-my-bash" ]
 then
-    cd ~/downloads
-    curl -LO https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh
-    chmod u+x install.sh
-    ./install.sh
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)" --unattended
 fi
 
 # set up powerline theme
@@ -33,4 +30,4 @@ then
     echo "alias reload='source ~/.bashrc'" >> ~/.bashrc
 fi
 
-echo "✅ Done! Please open a new terminal to finish setup. 🚀"
+echo "✅ Done! Please open a new terminal to finish setup."
