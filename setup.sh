@@ -3,7 +3,7 @@
 # if oh-my-bash
 if [ ! -d "/home/codespace/.oh-my-bash" ]
 then
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)" > /dev/null
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 fi
 
 # set up powerline theme
@@ -21,7 +21,7 @@ then
     ./squashfs-root/AppRun --version
     sudo mv squashfs-root /
     sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
-    sudo apt-get install neovim > /dev/null
+    sudo apt-get install neovim
 fi
 
 # set up aliases
