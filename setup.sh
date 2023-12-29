@@ -26,6 +26,13 @@ then
 fi
 
 
+# setup nvim config
+if [ ! -d "/home/codespace/.oh-my-bash" ]
+then
+    git clone https://github.com/a1re1/vim-dotfiles.git ~/.config/nvim
+fi
+
+
 # set up aliases
 if ! grep "alias reload=" ~/.bashrc &> /dev/null
 then
