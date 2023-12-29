@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # if oh-my-bash
-if [ ! -d "/home/codespace/.oh-my-bash" ]
+if [ ! -d "~/.oh-my-bash" ]
 then
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)" --unattended
 fi
@@ -27,9 +27,16 @@ fi
 
 
 # setup nvim config
-if [ ! -d "/home/codespace/.oh-my-bash" ]
+if [ ! -d "~/.config/nvim" ]
 then
     git clone https://github.com/a1re1/vim-dotfiles.git ~/.config/nvim
+fi
+
+# install packer.nvim
+if [ ! -d "~/.local/share/nvim/site/pack/packer/start/packer.nvim" ]
+then
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+    nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 fi
 
 
