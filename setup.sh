@@ -32,13 +32,6 @@ then
     git clone https://github.com/a1re1/vim-dotfiles.git ~/.config/nvim
 fi
 
-# install packer.nvim
-if [ ! -d "~/.local/share/nvim/site/pack/packer/start/packer.nvim" ]
-then
-    git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-    nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-fi
-
 
 # set up aliases
 if ! grep "alias reload=" ~/.bashrc &> /dev/null
