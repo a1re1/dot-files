@@ -1,3 +1,3 @@
 # dot-files
 setup with:
-`bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"`
+`bash -c "$(curl -fsSL https://raw.githubusercontent.com/a1re1/dot-files/main/setup.sh)"`
