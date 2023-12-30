@@ -34,18 +34,19 @@ fi
 
 
 # install elixir
-if ! command -v elixir &> /dev/null
-then
+printf 'Install elixir and pheonix (y/n)? '
+read elAnswer
+if [ "$elAnswer" != "${elAnswer#[Yy]}" ] ;then 
   sudo add-apt-repository ppa:rabbitmq/rabbitmq-erlang
   sudo apt update
   sudo apt install elixir erlang-dev erlang-xmerl
   sudo apt-get install inotify-tools
   sudo apt install postgresql
   sudo systemctl start postgresql
-  #install pheonix
   mix local.hex
   mix archive.install hex phx_new
   echo "export PATH='$PATH:/usr/bin/elixir/bin'" >> ~/.bashrc
+  echo "⚗️ Installed elixir and deps"
 fi
 
 # set up aliases
