@@ -42,7 +42,7 @@ if [ "$elAnswer" != "${elAnswer#[Yy]}" ] ;then
   sudo apt install elixir erlang-dev erlang-xmerl
   sudo apt-get install inotify-tools
   sudo apt install postgresql
-  sudo systemctl start postgresql
+  sudo service postgresql start
   mix local.hex
   mix archive.install hex phx_new
   echo "export PATH='$PATH:/usr/bin/elixir/bin'" >> ~/.bashrc
