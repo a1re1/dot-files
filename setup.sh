@@ -42,6 +42,11 @@ then
   echo "export PATH='$PATH:/usr/bin/elixir/bin'" >> ~/.bashrc
 fi
 
+#install pheonix
+mix local.hex
+mix archive.install hex phx_new
+
+
 # set up aliases
 if ! grep "alias reload=" ~/.bashrc &> /dev/null
 then
