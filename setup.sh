@@ -33,6 +33,15 @@ then
 fi
 
 
+# install elixir
+if ! command -v elixir &> /dev/null
+then
+  sudo add-apt-repository ppa:rabbitmq/rabbitmq-erlang
+  sudo apt update
+  sudo apt install elixir erlang-dev erlang-xmerl
+  echo "export PATH='$PATH:/usr/bin/elixir/bin'" >> ~/.bashrc
+fi
+
 # set up aliases
 if ! grep "alias reload=" ~/.bashrc &> /dev/null
 then
