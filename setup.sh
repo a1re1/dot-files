@@ -26,6 +26,10 @@ if [ ! -d "~/.config/nvim" ]; then
 	git clone https://github.com/a1re1/vim-dotfiles.git ~/.config/nvim
 fi
 
+if [ ! -d "~/blossom" ]; then
+	git clone https://github.com/a1re1/blossom.git ~/blossom
+fi
+
 # set up aliases
 if ! grep "alias reload=" ~/.bashrc &>/dev/null; then
 	echo "alias reload='source ~/.bashrc'" >>~/.bashrc
