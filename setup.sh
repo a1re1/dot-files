@@ -28,6 +28,7 @@ fi
 
 if [ ! -d "~/blossom" ]; then
 	git clone https://github.com/a1re1/blossom.git ~/blossom
+	chmod +x ~/blossom/main
 fi
 
 # set up aliases
@@ -36,6 +37,9 @@ if ! grep "alias reload=" ~/.bashrc &>/dev/null; then
 fi
 if ! grep "alias vim=" ~/.bashrc &>/dev/null; then
 	echo "alias vim='nvim'" >>~/.bashrc
+fi
+if !grep "alias blossom=" ~/.bashrc &>/dev/null; then
+	echo "alias blossom='~/blossom/main'" >>~/.bashrc
 fi
 
 echo "✅ Done! Please open a new terminal to finish setup."
