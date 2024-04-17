@@ -46,5 +46,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install openjdk-21-jdk -y
 export PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH
 echo "export PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:\$PATH" >>~/.bashrc
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+echo "export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64/bin" >>~/.bashrc
 
 echo "✅ Done! Please open a new terminal to finish setup."
