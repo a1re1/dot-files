@@ -49,4 +49,8 @@ echo "export PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:\$PATH" >>~/.bashrc
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
 echo "export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64/bin" >>~/.bashrc
 
+sudo add-apt-repository -y ppa:neovim-ppa/unstable
+sudo apt update
+sudo apt install neovim -y
+
 echo "✅ Done! Please open a new terminal to finish setup."
